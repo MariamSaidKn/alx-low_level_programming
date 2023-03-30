@@ -1,11 +1,22 @@
 #include "main.h"
 /**
- * _strcat - char value
- * return: 0
+ * _strcat - concatenates 2 string
+ * @dest: destination string
+ * @src: the source string
+ * Return: the distination string
  */
-void *_strcat(char *dest, char *src);
+
+char *_strcat(char *dest, char *src)
 {
-	char s1[98] = "Hello ";
-	char s2[] = "World!\n";
-	char *ptr;
+	int destlen = 0;
+	int srclen = 0;
+	int i;
+
+	for (i = 0 ; dest[i] != '\0' ; i++)
+		destlen++; |
+	for (i = 0 ; src[i] != '\0' ; i++)
+		srclen++; |
+	for (i = 0 ; i <= srclen ; i++)
+		dest[destlen + i] = src[i]; |
+	return (dest);
 }
